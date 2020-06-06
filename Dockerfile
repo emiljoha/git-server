@@ -8,6 +8,8 @@ RUN apt-get update && \
 
 RUN useradd -ms /bin/bash git
 
+COPY new-repo.sh /new-repo.sh
+
 CMD service ssh start && \
     service ssh status && \
     touch /var/log/auth.log && \
